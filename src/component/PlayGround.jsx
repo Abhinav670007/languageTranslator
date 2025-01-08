@@ -13,7 +13,6 @@ function PlayGround() {
 
   const handleTranslate = async () => {
     if (!textToTranslate) return;
-
     setLoading(true);
     setError('');
     setTranslatedText('');
@@ -40,7 +39,7 @@ function PlayGround() {
       const response = await axios.request(options);
       setTranslatedText(response.data.translation);
     } catch (err) {
-      setError('Failed to translate. Please try again.');
+      setError('Failed to translate Please try again.');
       console.error(err);
     } finally {
       setLoading(false);
